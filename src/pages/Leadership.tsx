@@ -31,6 +31,8 @@ import paulMasseyImage from '@/assets/paul-massey.png';
 import barryGosinImage from '@/assets/barry-gosin.png';
 import scottRechlerImage from '@/assets/scott-rechler.png';
 import keryDavisImage from '@/assets/kery-davis.jpg';
+import chrisCuomoImage from '@/assets/chris-cuomo.png';
+import richardCodellaImage from '@/assets/richard-codella.jpg';
 
 // Static data moved outside component to prevent recreation on each render
 const executives = [
@@ -149,6 +151,23 @@ const allAdvisors: Advisor[] = [
       slug: 'roger-mason-jr',
       description: 'Ten-season NBA veteran turned executive, bringing sports business acumen and strategic partnerships.',
       image: rogerMasonJrImage,
+    },
+    {
+      name: 'Chris Cuomo',
+      title: 'Emmy Award Nominated Journalist',
+      board: 'Board of Advisors',
+      slug: 'chris-cuomo',
+      description: 'Emmy Award nominated journalist with over two decades of experience, having interviewed presidents and world leaders.',
+      image: chrisCuomoImage,
+    },
+    {
+      name: 'Richard Codella',
+      title: 'Director of Construction',
+      board: 'Board of Advisors',
+      slug: 'richard-codella',
+      description: 'Over 35 years of construction experience managing $1B+ in projects. Former Director of Construction at Lennar.',
+      image: richardCodellaImage,
+      imagePosition: 'top-center',
     },
     {
       name: 'Donald DiFrancesco',
