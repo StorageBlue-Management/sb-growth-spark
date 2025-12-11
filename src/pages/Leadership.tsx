@@ -112,33 +112,6 @@ const executives = [
       ],
       image: justinHorowitzImage,
     },
-    {
-      name: 'Warren Diamond',
-      title: 'Senior Advisor',
-      subtitle: 'Partner',
-      slug: 'warren-diamond',
-      bio: 'Self-storage pioneer with over 40 years of experience in the NY/NJ markets.',
-      achievements: [
-        'CEO of American Real Estate Management',
-        '40+ years in self-storage',
-        'Former partner (25 years) in American Self Storage',
-        'Deep expertise in NY/NJ self-storage markets'
-      ],
-      image: warrenDiamondImage,
-    },
-    {
-      name: 'Larry Namer',
-      title: 'Senior Advisor',
-      subtitle: 'Partner',
-      slug: 'larry-namer',
-      bio: 'Entertainment, media, and real estate entrepreneur with over 50 years of experience.',
-      achievements: [
-        'Co-Founder of E! Entertainment Television (valued over $15B)',
-        '50+ years entrepreneurial experience',
-        'Founded Comspan Communications, Steeplechase Media, Metan Global Entertainment Group'
-      ],
-      image: larryNamerImage,
-    },
 ];
 
 type Advisor = {
@@ -281,7 +254,23 @@ const allAdvisors: Advisor[] = [
       description: 'Strategic partner providing business advisory and operational expertise.',
       image: michaelShereskyImage,
       imagePosition: 'top-center',
-  },
+    },
+    {
+      name: 'Warren Diamond',
+      title: 'Senior Advisor',
+      board: 'Board of Business Advisors',
+      slug: 'warren-diamond',
+      description: 'Self-storage pioneer with over 40 years of experience in the NY/NJ markets. CEO of American Real Estate Management.',
+      image: warrenDiamondImage,
+    },
+    {
+      name: 'Larry Namer',
+      title: 'Senior Advisor',
+      board: 'Board of Business Advisors',
+      slug: 'larry-namer',
+      description: 'Co-Founder of E! Entertainment Television. Entertainment, media, and real estate entrepreneur with over 50 years of experience.',
+      image: larryNamerImage,
+    },
 ];
 
 // Responsive image component to improve headshot placement across varying aspect ratios
