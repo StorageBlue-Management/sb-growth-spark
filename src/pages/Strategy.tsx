@@ -161,7 +161,7 @@ const Strategy = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Proven Track Record</h4>
-                    <p className="text-sm text-primary-foreground/90">Over $300M in successful facility developments and exits with consistent returns above 20% IRR</p>
+                    <p className="text-sm text-primary-foreground/90">Over $300M in successful facility developments and exits with consistent returns above 20% IRR.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -170,7 +170,7 @@ const Strategy = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Vertically Integrated</h4>
-                    <p className="text-sm text-primary-foreground/90">In-house development, construction, and property management capabilities reduce costs and improve execution</p>
+                    <p className="text-sm text-primary-foreground/90">In-house development, construction, and property management capabilities reduce costs and improve execution.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -179,7 +179,7 @@ const Strategy = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Strategic Markets</h4>
-                    <p className="text-sm text-primary-foreground/90">Focus on high-growth, underserved markets with strong demographic and economic trends</p>
+                    <p className="text-sm text-primary-foreground/90">Focus on high-growth, underserved markets with strong demographic and economic trends.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -188,7 +188,7 @@ const Strategy = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Free Pickup Service</h4>
-                    <p className="text-sm text-primary-foreground/90">Unique competitive advantage that drives occupancy rates 15-20% higher than market average</p>
+                    <p className="text-sm text-primary-foreground/90">Unique competitive advantage that drives occupancy rates 15-20% higher than market average.</p>
                   </div>
                 </div>
               </div>
