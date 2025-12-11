@@ -197,10 +197,6 @@ const Portfolio = () => {
                           {facility.status}
                         </span>
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Limited Partnership</span>
-                        <span className="font-semibold text-foreground">{facility.caseStudy}</span>
-                      </div>
                     </div>
                   </div>
                 </div>
