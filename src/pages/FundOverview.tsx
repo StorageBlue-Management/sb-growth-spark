@@ -136,7 +136,7 @@ const FundOverview = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-3xl font-bold text-primary">$70M</div>
+                <div className="text-3xl font-bold text-primary">$40M</div>
                 <p className="text-xs text-muted-foreground mt-1">Targeted purchases</p>
               </CardContent>
             </Card>
@@ -236,7 +236,7 @@ const FundOverview = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center">
               <CardHeader>
-                <div className="text-5xl font-bold text-primary mb-2">70%</div>
+                <div className="text-5xl font-bold text-primary mb-2">25%</div>
                 <CardTitle className="text-lg">Stabilized Acquisitions</CardTitle>
               </CardHeader>
               <CardContent>
@@ -246,7 +246,7 @@ const FundOverview = () => {
 
             <Card className="text-center">
               <CardHeader>
-                <div className="text-5xl font-bold text-primary mb-2">20%</div>
+                <div className="text-5xl font-bold text-primary mb-2">60%</div>
                 <CardTitle className="text-lg">Ground-Up Development</CardTitle>
               </CardHeader>
               <CardContent>
@@ -256,7 +256,7 @@ const FundOverview = () => {
 
             <Card className="text-center">
               <CardHeader>
-                <div className="text-5xl font-bold text-primary mb-2">10%</div>
+                <div className="text-5xl font-bold text-primary mb-2">15%</div>
                 <CardTitle className="text-lg">Value-Add Opportunities</CardTitle>
               </CardHeader>
               <CardContent>
