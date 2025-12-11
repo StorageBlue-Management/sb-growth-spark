@@ -114,6 +114,19 @@ const executives = [
       ],
       image: justinHorowitzImage,
     },
+    {
+      name: 'Richard Codella',
+      title: 'Director of Construction',
+      slug: 'richard-codella',
+      bio: 'Over 35 years of construction experience managing $1B+ in projects. Former Director of Construction at Lennar.',
+      achievements: [
+        '35+ years construction experience',
+        'Managed $1B+ in projects',
+        'Former Director of Construction at Lennar'
+      ],
+      image: richardCodellaImage,
+      imagePosition: 'top-center' as const,
+    },
 ];
 
 type Advisor = {
@@ -127,6 +140,14 @@ type Advisor = {
 };
 
 const allAdvisors: Advisor[] = [
+    {
+      name: 'Chris Cuomo',
+      title: 'Emmy Award Nominated Journalist',
+      board: 'Board of Advisors',
+      slug: 'chris-cuomo',
+      description: 'Emmy Award nominated journalist with over two decades of experience, having interviewed presidents and world leaders.',
+      image: chrisCuomoImage,
+    },
     {
       name: 'Byron Scott',
       title: 'NBA Champion & Hall of Famer',
@@ -151,23 +172,6 @@ const allAdvisors: Advisor[] = [
       slug: 'roger-mason-jr',
       description: 'Ten-season NBA veteran turned executive, bringing sports business acumen and strategic partnerships.',
       image: rogerMasonJrImage,
-    },
-    {
-      name: 'Chris Cuomo',
-      title: 'Emmy Award Nominated Journalist',
-      board: 'Board of Advisors',
-      slug: 'chris-cuomo',
-      description: 'Emmy Award nominated journalist with over two decades of experience, having interviewed presidents and world leaders.',
-      image: chrisCuomoImage,
-    },
-    {
-      name: 'Richard Codella',
-      title: 'Director of Construction',
-      board: 'Board of Advisors',
-      slug: 'richard-codella',
-      description: 'Over 35 years of construction experience managing $1B+ in projects. Former Director of Construction at Lennar.',
-      image: richardCodellaImage,
-      imagePosition: 'top-center',
     },
     {
       name: 'Donald DiFrancesco',
