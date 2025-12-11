@@ -16,7 +16,7 @@ const facilities = [
     sqft: '267,000',
     occupancy: '90%',
     status: 'Value-Add',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityStatenIslandImage,
   },
   {
@@ -25,7 +25,7 @@ const facilities = [
     sqft: '85,000',
     occupancy: '87%',
     status: 'Development',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityAberdeenImage,
   },
   {
@@ -34,7 +34,7 @@ const facilities = [
     sqft: '68,000',
     occupancy: '93%',
     status: 'Stabilized',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityWestLongBranchImage,
   },
   {
@@ -43,7 +43,7 @@ const facilities = [
     sqft: '95,000',
     occupancy: '92%',
     status: 'Stabilized',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityFerryImage,
   },
   {
@@ -52,7 +52,7 @@ const facilities = [
     sqft: '24,000',
     occupancy: '88%',
     status: 'Stabilized',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityPatersonImage,
   },
   {
@@ -61,7 +61,7 @@ const facilities = [
     sqft: '35,000',
     occupancy: '95%',
     status: 'Stabilized',
-    caseStudy: 'Limited Partnership',
+    caseStudy: 'II',
     image: facilityCliftonImage,
   },
 ];
