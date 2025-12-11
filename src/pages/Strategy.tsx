@@ -135,7 +135,7 @@ const Strategy = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">Identified to be Deployed</h3>
                 </div>
-                <div className="text-3xl font-heading font-bold text-primary mb-2">$70M</div>
+                <div className="text-3xl font-heading font-bold text-primary mb-2">$40M</div>
                 <p className="text-sm text-muted-foreground">Targeted purchases</p>
               </div>
 
@@ -199,17 +199,17 @@ const Strategy = () => {
               <h3 className="text-2xl font-heading font-bold text-primary mb-6 text-center">Investment Structure</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-heading font-bold text-primary mb-2">50%</div>
+                  <div className="text-4xl font-heading font-bold text-primary mb-2">25%</div>
                   <p className="text-sm font-semibold text-foreground mb-1">Stabilized Acquisitions</p>
                   <p className="text-xs text-muted-foreground">Immediate cash flow from performing assets</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-heading font-bold text-primary mb-2">30%</div>
+                  <div className="text-4xl font-heading font-bold text-primary mb-2">60%</div>
                   <p className="text-sm font-semibold text-foreground mb-1">Value-Add Opportunities</p>
                   <p className="text-xs text-muted-foreground">Repositioning underperforming assets</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-heading font-bold text-primary mb-2">20%</div>
+                  <div className="text-4xl font-heading font-bold text-primary mb-2">15%</div>
                   <p className="text-sm font-semibold text-foreground mb-1">Ground-Up Development</p>
                   <p className="text-xs text-muted-foreground">New construction in high-demand areas</p>
                 </div>
