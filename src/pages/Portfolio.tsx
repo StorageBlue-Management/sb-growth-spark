@@ -198,7 +198,7 @@ const Portfolio = () => {
                         </span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Case Study</span>
+                        <span className="text-sm text-muted-foreground">Limited Partnership</span>
                         <span className="font-semibold text-foreground">{facility.caseStudy}</span>
                       </div>
                     </div>
@@ -227,7 +227,7 @@ const Portfolio = () => {
               <div className="bg-card border border-border rounded-lg p-10 hover-lift">
                 <div className="mb-6">
                   <h3 className="text-3xl font-heading font-bold text-foreground mb-2">
-                    StorageBlue Case Study I
+                    StorageBlue Limited Partnership I
                   </h3>
                   <p className="text-lg text-muted-foreground">North Jersey / NYC Metro</p>
                 </div>
@@ -262,7 +262,7 @@ const Portfolio = () => {
               <div className="bg-card border border-border rounded-lg p-10 hover-lift">
                 <div className="mb-6">
                   <h3 className="text-3xl font-heading font-bold text-foreground mb-2">
-                    StorageBlue Case Study II
+                    StorageBlue Limited Partnership II
                   </h3>
                   <p className="text-lg text-muted-foreground">New Jersey</p>
                 </div>
@@ -297,7 +297,7 @@ const Portfolio = () => {
               <div className="bg-card border border-border rounded-lg p-10 hover-lift">
                 <div className="mb-6">
                   <h3 className="text-3xl font-heading font-bold text-foreground mb-2">
-                    StorageBlue Case Study III
+                    StorageBlue Limited Partnership III
                   </h3>
                   <p className="text-lg text-muted-foreground">New Jersey</p>
                 </div>
