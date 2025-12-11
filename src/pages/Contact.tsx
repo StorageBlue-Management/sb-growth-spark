@@ -145,8 +145,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Phone</div>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-8900
+                    <a href="tel:+13105606055" className="text-muted-foreground hover:text-primary transition-colors">
+                      (310) 560-6055
                     </a>
                   </div>
                 </div>
@@ -159,8 +159,8 @@ const Contact = () => {
                       <div className="font-semibold text-foreground mb-3">Locations</div>
                       <div className="space-y-3 text-muted-foreground text-sm">
                         <p>
-                          230 Park Avenue, Suite 2045<br />
-                          New York, NY 10169
+                          11 West 42nd Street<br />
+                          New York, NY 10036
                         </p>
                         <p>
                           32 West 22nd Street 4th Floor<br />
