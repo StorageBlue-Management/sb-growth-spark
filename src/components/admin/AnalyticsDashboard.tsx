@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { TrendingUp, Eye, Users, MousePointer } from 'lucide-react';
+import { TrendingUp, Eye, Users, MousePointer, RefreshCw } from 'lucide-react';
 
 const AnalyticsDashboard = () => {
   const [signupData, setSignupData] = useState<any[]>([]);
@@ -11,60 +12,74 @@ const AnalyticsDashboard = () => {
   const [pageViewsData, setPageViewsData] = useState<any[]>([]);
   const [totalPageViews, setTotalPageViews] = useState(0);
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+
+  const loadAnalytics = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      // Load signups by month
+      const { data: profiles } = await supabase
+        .from('profiles')
+        .select('created_at')
+        .order('created_at', { ascending: true });
+
+      // Load inquiries by month
+      const { data: inquiries } = await supabase
+        .from('investor_inquiries')
+        .select('created_at')
+        .order('created_at', { ascending: true });
+
+      // Load user activity for traffic stats
+      const { data: activities } = await supabase
+        .from('user_activity')
+        .select('*')
+        .order('created_at', { ascending: true });
+
+      // Process signup data
+      if (profiles) {
+        const signupsByMonth = processDataByMonth(profiles);
+        setSignupData(signupsByMonth);
+      }
+
+      // Process inquiry data
+      if (inquiries) {
+        const inquiriesByMonth = processDataByMonth(inquiries);
+        setInquiryData(inquiriesByMonth);
+      }
+
+      // Process traffic data
+      if (activities) {
+        const trafficByDay = processTrafficByDay(activities);
+        setTrafficData(trafficByDay);
+
+        const pageViews = processPageViews(activities);
+        setPageViewsData(pageViews);
+
+        setTotalPageViews(activities.length);
+        
+        // Count unique visitors (unique user_ids and ip_addresses)
+        const uniqueUsers = new Set([
+          ...activities.filter(a => a.user_id).map(a => a.user_id),
+          ...activities.filter(a => a.ip_address).map(a => a.ip_address)
+        ]);
+        setUniqueVisitors(uniqueUsers.size);
+      }
+
+      setLastUpdated(new Date());
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     loadAnalytics();
-  }, []);
+    
+    // Auto-refresh every 30 seconds
+    const interval = setInterval(loadAnalytics, 30000);
+    return () => clearInterval(interval);
+  }, [loadAnalytics]);
 
-  const loadAnalytics = async () => {
-    // Load signups by month
-    const { data: profiles } = await supabase
-      .from('profiles')
-      .select('created_at')
-      .order('created_at', { ascending: true });
-
-    // Load inquiries by month
-    const { data: inquiries } = await supabase
-      .from('investor_inquiries')
-      .select('created_at')
-      .order('created_at', { ascending: true });
-
-    // Load user activity for traffic stats
-    const { data: activities } = await supabase
-      .from('user_activity')
-      .select('*')
-      .order('created_at', { ascending: true });
-
-    // Process signup data
-    if (profiles) {
-      const signupsByMonth = processDataByMonth(profiles);
-      setSignupData(signupsByMonth);
-    }
-
-    // Process inquiry data
-    if (inquiries) {
-      const inquiriesByMonth = processDataByMonth(inquiries);
-      setInquiryData(inquiriesByMonth);
-    }
-
-    // Process traffic data
-    if (activities) {
-      const trafficByDay = processTrafficByDay(activities);
-      setTrafficData(trafficByDay);
-
-      const pageViews = processPageViews(activities);
-      setPageViewsData(pageViews);
-
-      setTotalPageViews(activities.length);
-      
-      // Count unique visitors (unique user_ids and ip_addresses)
-      const uniqueUsers = new Set([
-        ...activities.filter(a => a.user_id).map(a => a.user_id),
-        ...activities.filter(a => a.ip_address).map(a => a.ip_address)
-      ]);
-      setUniqueVisitors(uniqueUsers.size);
-    }
-  };
 
   const processDataByMonth = (data: any[]) => {
     const monthCounts: { [key: string]: number } = {};
@@ -134,6 +149,27 @@ const AnalyticsDashboard = () => {
 
   return (
     <div className="space-y-8">
+      {/* Header with Refresh */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h2 className="text-2xl font-bold">Analytics Dashboard</h2>
+          {lastUpdated && (
+            <p className="text-sm text-muted-foreground">
+              Last updated: {lastUpdated.toLocaleTimeString()}
+            </p>
+          )}
+        </div>
+        <Button 
+          variant="outline" 
+          size="sm" 
+          onClick={loadAnalytics}
+          disabled={isLoading}
+        >
+          <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+          {isLoading ? 'Refreshing...' : 'Refresh'}
+        </Button>
+      </div>
+
       {/* Traffic Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Card>
