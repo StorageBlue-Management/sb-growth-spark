@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-primary-foreground/70">
-            <p>© StorageBlue Capital Management LLC 2025. All rights reserved.</p>
+            <p>© StorageBlue Capital Management LLC {new Date().getFullYear()}. All rights reserved.</p>
             <p className="text-left md:text-right max-w-2xl">
               This is not an offer to sell or a solicitation to buy securities. This material is confidential and proprietary and for qualified institutional and accredited investors only.
             </p>
