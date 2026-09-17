@@ -318,7 +318,7 @@ const Contact = () => {
                 securities laws.
               </p>
               <p className="pt-4 border-t border-border">
-                © StorageBlue, LLC 2025. All rights reserved. Unauthorized use or distribution is prohibited.
+                © StorageBlue Capital Management LLC {new Date().getFullYear()}. All rights reserved. Unauthorized use or distribution is prohibited.
               </p>
             </div>
           </div>
